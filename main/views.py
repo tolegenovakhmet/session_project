@@ -17,4 +17,3 @@ def about(request):
     return HttpResponse('About page')
 
 # comment for checking git system
-#comment is very good!
