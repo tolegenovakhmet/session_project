@@ -6,7 +6,7 @@ def index(request):
         'title': 'Miras',
         'content': 'главная страница магазина - HOME',
         'list': ['first', 'second'],
-        'dict': {'first': 1},
+        'dict': {'first': 2},
         'is_authenticated': False
     }
     
@@ -17,3 +17,4 @@ def about(request):
     return HttpResponse('About page')
 
 # comment for checking git system
+#comment is very good!
