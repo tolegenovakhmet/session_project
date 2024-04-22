@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>airastana</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{% static 'deps/css/index.css' %}">
     
 </head>
 <body>
@@ -30,13 +30,13 @@
         <section id="featured">
             <h2>Popular destinations</h2>
             <div class="destination">
-                <img src="astana.jpg" alt="Астана" width="200">
+                <img src="{%static 'deps/images/astana.jpg' %}" alt="Астана" width="200">
                 <h3>Astana</h3>
                 <p>  The capital of Kazakhstan, a modern city with a rich culture and history.</p>
                 
             </div>
             <div class="destination">
-                <img src="almaty.jpg" alt="Алматы" width="200">
+                <img src="{%static 'deps/images/almaty.jpg'%}" alt="Алматы" width="200">
                 <h3>Almaty</h3>
                 <p> The largest city of Kazakhstan, located at the foot of the mountains.</p>
                 
@@ -71,7 +71,7 @@
 
     
     <footer>
-        <p>&copy; 2024 Air Astana. All rights reserved.  </p>
+        <p>&copy; 2024 Fly Almaty. All rights reserved.  </p>
     </footer>
     
 </body>
