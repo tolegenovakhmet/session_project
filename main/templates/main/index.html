@@ -4,17 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'deps/styles.css' %}">
-    <title>{{title}}</title>
+    <title>airastana</title>
+    <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
-    <nav>
-        <div class="nav_logo">{{content}}</div>
-        <ul class="nav_links">
-            <li class="link"><a href="{% url 'main:index'%}">Home</a></li>
-            <li class="link"><a href="{% url "main:about"%}">About</a></li>
-        </ul>
-        <button class="btn">Contact</button>
-    </nav>
+    <header>
+        <h1>{{content   }}</h1>
+        
+        <nav>
+            <ul>
+                <li class="link"><a href="{% url 'main:index'%}">Home</a></li>
+                <li class="link"><a href="{% url "main:about"%}">About</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="booking.html">Book and manage</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="register.html">Register</a></li>
+                
+            </ul>
+        </nav>
+        
+    
+    </header>
+    <main>
+        <section id="featured">
+            <h2>Popular destinations</h2>
+            <div class="destination">
+                <img src="astana.jpg" alt="Астана" width="200">
+                <h3>Astana</h3>
+                <p>  The capital of Kazakhstan, a modern city with a rich culture and history.</p>
+                
+            </div>
+            <div class="destination">
+                <img src="almaty.jpg" alt="Алматы" width="200">
+                <h3>Almaty</h3>
+                <p> The largest city of Kazakhstan, located at the foot of the mountains.</p>
+                
+            </div>
+            
+        </section>
+        <section id="services">
+            <h2>Our services</h2>
+            <ul>
+                
+                 <li>Convenient online ticket booking</li>
+                 <li>A wide selection of drinks and meals during the flight</li>
+                 <li>Spacious and comfortable lounges</li>
+                 <li>Loyalty programme for regular passengers</li>
+ 
+ 
+            </ul>
+        </section>
+        <section id="booking">
+            <h2>Booking</h2>
+            <form action="#">
+                <label for="departure">From:</label>
+                <input type="text" id="departure" name="departure">
+                <label for="destination">To:</label>
+                <input type="text" id="destination" name="destination">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <button type="submit">Find a flight</button>
+            </form>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2024 Air Astana. All rights reserved.  </p>
+    </footer>
+    
 </body>
 </html>
