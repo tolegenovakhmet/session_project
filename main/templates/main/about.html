@@ -4,16 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'deps/styles.css' %}">
-    <title>{{title}}</title>
+    <title>About Us</title>
+    <link rel="stylesheet" href="{%static 'deps/css/styles.css' %}">
 </head>
 <body>
-<h1>{{ content }}</h1>
+    <header>
+        <h1>About Us</h1>
+    </header>
     <nav>
-        <!-- <div class="nav_logo">FLY ALMATA</div> -->
-        <ul class="nav_links">
+        <ul>
+            <li class="link"><a href="{% url 'main:index'%}">Home</a></li>
+            <li class="link"><a href="{% url "main:about"%}">About</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="flights.html">Flights</a></li>
         </ul>
-        <button class="btn">Contact</button>
     </nav>
+    <main>
+        <p>Here you can describe your company and your activities.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 All rights reserved.</p>
+    </footer>
 </body>
 </html>
