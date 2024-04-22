@@ -3,17 +3,20 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'title': 'Miras',
-        'content': 'главная страница магазина - HOME',
-        'list': ['first', 'second'],
-        'dict': {'first': 2},
-        'is_authenticated': False  
+        'title': 'FLY-ALMATA',
+        'content': 'главная страница - FLY_ALMATA',
+ 
     }
     
     return render(request, 'main/index.html', context)
     
     
 def about(request):
-    return HttpResponse('About page')
-
+    context = {
+        'title': 'FLY ALMATA о нас',
+        'content': 'Об FLY-ALMATA',
+        # 'text_on_page':     
+    }
+    
+    return render(request, 'main/about.html', context)
 # comment for checking git system
