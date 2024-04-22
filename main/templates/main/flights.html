@@ -6,19 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flights</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{%static 'deps/css/styles.css'%}">
 </head>
 <body>
     <header>
-        <h1>Flights</h1>
+        <h1>{{content}}</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li class="link"><a href="{% url 'main:index'%}">Home</a></li>
+            <li class="link"><a href="{% url "main:about"%}">About</a></li>
+            <li class="link"><a href="{% url "main:flights"%}">Flights</a></li>
             <li><a href="contacts.html">Contacts</a></li>
             <li><a href="booking.html">Booking</a></li>
-            <li><a href="flights.html">Flights</a></li>
         </ul>
     </nav>
     <main>

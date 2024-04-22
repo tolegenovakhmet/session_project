@@ -19,4 +19,14 @@ def about(request):
     }
     
     return render(request, 'main/about.html', context)
+
+
+def flights(request):
+    context = {
+        'title': "flights",
+        'content': 'you can see',
+        
+    }
+    
+    return render(request, 'main/flights.html',context)
 # comment for checking git system
