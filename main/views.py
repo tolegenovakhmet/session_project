@@ -4,7 +4,7 @@ from django.shortcuts import render
 def index(request):
     context = {
         'title': 'FLY-ALMATA',
-        'content': 'главная страница - FLY_ALMATA',
+        'content': 'Fly-Almaty',
  
     }
     
@@ -19,6 +19,7 @@ def about(request):
     }
     
     return render(request, 'main/about.html', context)
+
 
 
 def flights(request):

@@ -4,75 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
     <title>airastana</title>
-    <link rel="stylesheet" href="{% static 'deps/css/index.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'deps/css/styles.css' %}">
 </head>
-<body>
-    <header>
-        <h1>{{content   }}</h1>
-        
+    <body>
         <nav>
-            <ul>
+            <div class="nav__logo">{{content}}</div>            
+            <ul class="nav_links">
                 <li class="link"><a href="{% url 'main:index'%}">Home</a></li>
                 <li class="link"><a href="{% url "main:about"%}">About</a></li>
                 <li class="link"><a href="{% url "main:flights"%}">Flights</a></li>
-                <li><a href="booking.html">Book and manage</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-                <li><a href="register.html">Register</a></li>
-                
+                <li class="link"><a href="booking.html">Book and manage</a></li>
+                <li class="link"><a href="register.html">Register</a></li>
             </ul>
+            <button class="btn">Contact</button>
         </nav>
-        
-    
-    </header>
-    <main>
-        <section id="featured">
-            <h2>Popular destinations</h2>
-            <div class="destination">
-                <img src="{%static 'deps/images/astana.jpg' %}" alt="Астана" width="200">
-                <h3>Astana</h3>
-                <p>  The capital of Kazakhstan, a modern city with a rich culture and history.</p>
-                
-            </div>
-            <div class="destination">
-                <img src="{%static 'deps/images/almaty.jpg'%}" alt="Алматы" width="200">
-                <h3>Almaty</h3>
-                <p> The largest city of Kazakhstan, located at the foot of the mountains.</p>
-                
-            </div>
-            
-        </section>
-        <section id="services">
-            <h2>Our services</h2>
-            <ul>
-                
-                 <li>Convenient online ticket booking</li>
-                 <li>A wide selection of drinks and meals during the flight</li>
-                 <li>Spacious and comfortable lounges</li>
-                 <li>Loyalty programme for regular passengers</li>
- 
- 
-            </ul>
-        </section>
-        <section id="booking">
-            <h2>Booking</h2>
-            <form action="#">
-                <label for="departure">From:</label>
-                <input type="text" id="departure" name="departure">
-                <label for="destination">To:</label>
-                <input type="text" id="destination" name="destination">
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date">
-                <button type="submit">Find a flight</button>
-            </form>
-        </section>
-    </main>
+       
 
-    
-    <footer>
-        <p>&copy; 2024 Fly Almaty. All rights reserved.  </p>
-    </footer>
-    
-</body>
+     <header class="section__container header__container">
+            <h2 class="section__header">Find and book<br>a great experience </h2>
+            <div class="destination">
+                <img src="{%static 'deps/images/airplane.jpg' %} " alt="header" /> 
+     </header> 
+           <section class="section__container booking__container">
+                <div class="booking__nav">
+                    <span>economy class</span>
+                    <span>business class</span>
+                    <span>first class</span>
+                </div>
+                <form>
+                    <div class="form_group">
+                        <span><i class="ri-map-pin-5-line"></i></span>
+                        <div class="input__content">
+                            <div class="input__group">
+                                <input type="">
+                                <label>Location</label>
+                            </div>
+                            <p>Where are you goung?</p>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <span><i class="ri-user-line"></i></span>
+                        <div class="input__content">
+                            <div class="input__group">
+                                <input type="">
+                                <label>Travellers</label>
+                            </div>
+                            <p>Add guests</p>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <span><i class="ri-calendar-line"></i></span>
+                        <div class="input__content">
+                            <div class="input__group">
+                                <input type="">
+                                <label>Departure</label>
+                            </div>
+                            <p>Add date</p>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <span><i class="ri-calendar-line"></i></span>
+                        <div class="input__content">
+                            <div class="input__group">
+                                <input type="">
+                                <label>Return</label>
+                            </div>
+                            <p>Add date</p>
+                        </div>
+                    </div>
+                    <button class="btn"><i class="ri-search-line"></i></button>
+                </form>
+           </section>
+           <section class="section__container plan_container">
+            <p class="subheader">TRAVEL SUPPORT</p>
+            <h2 class="section__header">Plan your travel with confidence</h2>
+            <p class="description">
+                Find help with your bookings and travel plans, and see what to expect
+                along your journey.
+            </p>
+            <div class="plan__grid">
+                <div class="plan_content">
+                    <span class="number">01</span>
+                    <h4>Travel Requirements for DUbai</h4>
+                    <p>
+                        Stay informed and prepared for your trip to Dubai with essential
+                        travel requirements, ensuring a smooth and hassle-free experience in
+                        this vibrant and captivating city.
+                    </p>
+                    <span class="number">02</span>
+                    <h4>Multi-risk travel insurance</h4>
+                    <p>
+                        Comprehensive protection for your peace of mind, covering a range of
+                        potential travel risks and unexpected situations.
+                    </p>
+                    <span class="number">03</span>
+                    <h4>Travel Requirements by destinations</h4>
+                    <p>
+                        Stay informed and plan your trip with ease, as we provide up-to-date
+                        information on travel requirements specific to your desired
+                        destinations.
+                    </p>
+                </div>
+                <div class="plan__image">
+                    <img src="{%static 'deps/images/airplane3.jpg' %} " alt="plan">
+                    <img src="{%static 'deps/images/almaty.jpg' %} " alt="plan">
+                    <img src="{%static 'deps/images/astana.jpg' %} " alt="plan">
+                </div>
+            </div>
+           </section>
+
+           <section class="memories">
+                <div class="section__container memories__container">
+                    <div class="memories__header">
+                        <h2 class="section__header">
+                            Travel to make memories all around the world
+                        </h2>
+                        <button class="view__all">View All</button>
+                    </div>
+                    <div class="memories__grid">
+                        <div class="memories__card">
+                            <span><i class="ri-calendar-2-line"></i></span>
+                            <h4>Book & relax</h4>
+                            <p>
+                                With "Book  and Relax," you can sit back, unwind, and enjoy the
+                                journey while we take care of everything else.
+                            </p>
+                        </div>
+                        <div class="memories__card">
+                            <span><i class="ri-shield-check-line"></i></span>
+                            <h4>Smart Checklist</h4>
+                            <p>
+                                Introducing Smart Checklist with us, the innovative solution
+                                revolutionzing the way you travel with our airline.
+                            </p>
+                        </div>
+                        <div class="memories__card">
+                            <span><i class="ri-bookmark-line"></i></span>
+                            <h4>Save More</h4>
+                            <p>
+                                From discounted ticket prices to exclusive promotions and deals,
+                                we prioritize affordability without compromising on quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+           </section>
+    </body>
 </html>

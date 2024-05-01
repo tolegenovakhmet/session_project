@@ -5,26 +5,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flights</title>
+    <title ">Flights</title>
     <link rel="stylesheet" href="{%static 'deps/css/styles.css'%}">
 </head>
 <body>
-    <header>
-        <h1>{{content}}</h1>
-    </header>
     <nav>
-        <ul>
+        <div class="nav__logo">{{content}}</div>            
+        <ul class="nav_links">
             <li class="link"><a href="{% url 'main:index'%}">Home</a></li>
             <li class="link"><a href="{% url "main:about"%}">About</a></li>
             <li class="link"><a href="{% url "main:flights"%}">Flights</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="booking.html">Booking</a></li>
+            <li class="link"><a href="booking.html">Book and manage</a></li>
+            <li class="link"><a href="register.html">Register</a></li>
         </ul>
     </nav>
     <main>
-        <h2>Available Flights</h2>
+        <h2 class="section__header">Available Flights</h2>
         <ul>
-            <li><a href="book_ticket.php?flight=astana-almaty">Astana - Almaty</a></li>
+               <li><a href="book_ticket.php?flight=astana-almaty">Astana - Almaty</a></li>
             <li><a href="book_ticket.php?flight=nyc-la">Astana - Shymkent</a></li>
             <li><a href="book_ticket.php?flight=london-paris">Astana - Aktobe</a></li>
             <li><a href="book_ticket.php?flight=london-paris">Almaty - Astana</a></li>
