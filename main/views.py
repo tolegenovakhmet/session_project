@@ -2,13 +2,13 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    context = {
-        'title': 'FLY-ALMATA',
-        'content': 'Fly-Almaty',
+    # context = {
+    #     'title': 'FLY-ALMATA',
+    #     'content': 'Fly-Almaty',
  
-    }
+    # }
     
-    return render(request, 'main/index.html', context)
+    return render(request, 'main/index.html')
     
     
 def about(request):

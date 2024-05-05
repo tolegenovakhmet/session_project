@@ -416,3 +416,44 @@ border-radius: 2rem;
 .lounge__details p{
     color: var(--text-light);
 }
+
+.travellers__grid{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.travellers__card{
+    border-radius: 5rem;
+    overflow: hidden;
+    box-shadow: 5px, 5px 20px rgba(0, 0, 0, 0.2);   
+}
+
+.travellers__card__content{
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+}
+
+.travellers__card__content img{
+    position: absolute;
+    max-width: 70px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--extra-light);
+    border-radius: 100%;
+}
+
+.travellers__card__content h4{
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);   
+}
+
+.travellers__card__content p{
+    font-weight: 500;
+    color: var(--text-light);
+}
