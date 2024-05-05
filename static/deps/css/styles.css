@@ -402,7 +402,7 @@ border-radius: 2rem;
 }
 
 .lounge__image img:nth-child(2){
-    max-width: 200px;
+    max-width: 300px;
     transform: translate(calc(-50% + 6rem), calc(-50% + 7rem));
 }
 
