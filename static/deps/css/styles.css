@@ -496,7 +496,7 @@ border-radius: 2rem;
     gap: 5rem;
 }
 
-.footer_col h3{
+.footer__col h3{
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--white);
