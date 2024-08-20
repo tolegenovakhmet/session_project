@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from main,models import User, Item
+
 def index(request):
     # context = {
     #     'title': 'FLY-ALMATA',

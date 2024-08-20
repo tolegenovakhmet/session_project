@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 {% load static%}
 <html lang="en">
@@ -41,7 +40,7 @@
         </div>
 
         <nav class="nav container">
-            <a href="index.html" class="nav__logo">
+            <a href="{% url 'main:index' %}" class="nav__logo">
                 <img src="{% static 'deps/images/sneakersicon.png'%}" alt="" class="nav__logo-img">
             </a> 
 
@@ -52,7 +51,7 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="{%url 'tickets:index'%}" class="nav__link  active-link">Shop</a>
+                        <a href="{%url 'tickets:product'%}" class="nav__link  active-link">Shop</a>
                     </li>
 
                     <li class="nav__item">
@@ -87,7 +86,7 @@
                     <span class="count">3</span>
                 </a>
 
-                <a href="cart.html" class="header__action-btn">
+                <a href="#" class="header__action-btn">
                     <img src="{%static 'deps/images/icon-cart.svg'%}" alt="">
                     <span class="count">3</span>
                 </a>    
@@ -99,7 +98,7 @@
 
         <section class="breadcrumb">
             <ul class="breadcrumb__list flex container">
-                <li><a href="{% static 'deps/images/sneakersicon.png'%}" class="breadcrumb__link">Home</a></li>
+                <li><a href="{% url 'main:index' %}" class="breadcrumb__link">Home</a></li>
                 <li><span class="breadcrumb__link">></span></li>
                 <li><span class="breadcrumb__link">Shop</span></li>
             </ul>
@@ -113,7 +112,7 @@
                 <div class="products__container grid">
                     <div class="product__item">
                         <div class="product__banner">
-                            <a href="details.html" class="product__images">
+                            <a href="{%url 'tickets:product'%}" class="product__images">
                                 <img src="{% static 'deps/images/jordanproduct.jpeg'%}" alt="" 
                                 class="product__img default">
 
@@ -776,6 +775,229 @@
                             </a>
                         </div>
                     </div>
+
+                    <div class="product__item">
+                        <div class="product__banner">
+                            <a href="details.html" class="product__images">
+                                <img src="{% static 'deps/images/jordanproduct.jpeg'%}" alt="" 
+                                class="product__img default">
+
+                                <img src="{% static 'deps/images/jordanproduct.jpeg'%}" alt="" 
+                                class="product__img hover">
+                            </a>
+
+                            <div class="product__actions">
+                                <a href="#" class="action__btn" aria-label="Quick View">
+                                    <i class="fi fi-rs-eye"></i>
+                                </a>
+
+                                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                                    <i class="fi fi-rs-heart"></i>
+                                </a>
+
+                                <a href="#" class="action__btn" aria-label="Compare">
+                                    <i class="fi fi-rs-shuffle"></i>
+                                </a> 
+                            </div>
+
+                            <div class="product__badge light-pink">Hot</div>
+                        </div>
+                        
+                        <div class="product__content">
+                            <span class="product__category">sneaker</span>
+                            <a href="details.html">
+                                <h3 class="product__title">Air Jordan 3</h3>
+                            </a>
+                            <div class="product__rating">
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                            </div>
+                            <div class="product__price flex">
+                                <span class="new__price">$238.85</span>
+                                <span class="old__price">$245.8</span>
+                            </div>
+
+                            <a 
+                                href="#" 
+                                class="action__btn cart__btn" 
+                                aria-label="Add To Cart"
+                            >
+                                <i class="fi fi-rs-shopping-bag-add"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="product__banner">
+                            <a href="details.html" class="product__images">
+                                <img src="{% static 'deps/images/asicsproduct.jpeg'%}" alt="" 
+                                class="product__img default">
+
+                                <img src="{% static 'deps/images/asicsproduct.jpeg'%}" 
+                                    alt="" 
+                                    class="product__img hover"
+                                />
+                            </a>
+
+                            <div class="product__actions">
+                                <a href="#" class="action__btn" aria-label="Quick View">
+                                    <i class="fi fi-rs-eye"></i>
+                                </a>
+
+                                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                                    <i class="fi fi-rs-heart"></i>
+                                </a>
+
+                                <a href="#" class="action__btn" aria-label="Compare">
+                                    <i class="fi fi-rs-shuffle"></i>
+                                </a> 
+                            </div>
+
+                            <div class="product__badge light-green">Hot</div>
+                        </div>
+                        
+                        <div class="product__content">
+                            <span class="product__category">sneaker</span>
+                            <a href="details.html">
+                                <h3 class="product__title">Asics</h3>
+                            </a>
+                            <div class="product__rating">
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                            </div>
+                            <div class="product__price flex">
+                                <span class="new__price">$220.85</span>
+                                <span class="old__price">$234.5</span>
+                            </div>
+
+                            <a 
+                                href="#" 
+                                class="action__btn cart__btn" 
+                                aria-label="Add To Cart"
+                            >
+                                <i class="fi fi-rs-shopping-bag-add"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="product__banner">
+                            <a href="details.html" class="product__images">
+                                <img src="{% static 'deps/images/blazerproduct.jpeg'%}" alt="" 
+                                class="product__img default">
+
+                                <img src="{% static 'deps/images/blazerproduct.jpeg'%}" 
+                                    alt="" 
+                                    class="product__img hover"
+                                />
+                            </a>
+
+                            <div class="product__actions">
+                                <a href="#" class="action__btn" aria-label="Quick View">
+                                    <i class="fi fi-rs-eye"></i>
+                                </a>
+
+                                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                                    <i class="fi fi-rs-heart"></i>
+                                </a>
+
+                                <a href="#" class="action__btn" aria-label="Compare">
+                                    <i class="fi fi-rs-shuffle"></i>
+                                </a> 
+                            </div>
+
+                            <div class="product__badge light-orange">Hot</div>
+                        </div>
+                        
+                        <div class="product__content">
+                            <span class="product__category">sneaker</span>
+                            <a href="details.html">
+                                <h3 class="product__title">Blazer mid</h3>
+                            </a>
+                            <div class="product__rating">
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                            </div>
+                            <div class="product__price flex">
+                                <span class="new__price">$225.35</span>
+                                <span class="old__price">$269.99</span>
+                            </div>
+
+                            <a 
+                                href="#" 
+                                class="action__btn cart__btn" 
+                                aria-label="Add To Cart"
+                            >
+                                <i class="fi fi-rs-shopping-bag-add"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="product__banner">
+                            <a href="details.html" class="product__images">
+                                <img src="{% static 'deps/images/adidas3product.jpeg'%}" alt="" 
+                                class="product__img default">
+
+                                <img src="{% static 'deps/images/adidas3product.jpeg'%}" 
+                                    alt="" 
+                                    class="product__img hover"
+                                />
+                            </a>
+
+                            <div class="product__actions">
+                                <a href="#" class="action__btn" aria-label="Quick View">
+                                    <i class="fi fi-rs-eye"></i>
+                                </a>
+
+                                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                                    <i class="fi fi-rs-heart"></i>
+                                </a>
+
+                                <a href="#" class="action__btn" aria-label="Compare">
+                                    <i class="fi fi-rs-shuffle"></i>
+                                </a> 
+                            </div>
+
+                            <div class="product__badge light-blue">Hot</div>
+                        </div>
+                        
+                        <div class="product__content">
+                            <span class="product__category">sneaker</span>
+                            <a href="details.html">
+                                <h3 class="product__title"> Adidas Sahale</h3>
+                            </a>
+                            <div class="product__rating">
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                                <i class="fi fi-rs-star"></i>
+                            </div>
+                            <div class="product__price flex">
+                                <span class="new__price">$235.00</span>
+                                <span class="old__price">$250.85</span>
+                            </div>
+
+                            <a 
+                                href="#" 
+                                class="action__btn cart__btn" 
+                                aria-label="Add To Cart"
+                            >
+                                <i class="fi fi-rs-shopping-bag-add"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
                 </div> 
 
                 <ul class="pagination">

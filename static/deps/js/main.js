@@ -1,4 +1,18 @@
 /* ===    SWIPER CAREGORIES    ===*/  
+
+function imgGallery() {
+    const mainImg = document.querySelector('.details__img'),
+    smalling = document.querySelectorAll('.details__small-img');
+
+    smalling.forEach((img)  => {
+        imgGallery.addEventListener('click', function(){
+            mainImg.src =this.src;
+        }); 
+    });
+}
+
+imgGallery();
+
 var swiperCategories = new Swiper(".categories__container", {
     spaceBetween: 10,
     loop: true,
